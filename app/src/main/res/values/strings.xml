@@ -5,4 +5,6 @@
     <string name="orderButton">Order</string>
     <string name="price">Price</string>
     <string name="priceOf">$0</string>
+    <string name="increament">+</string>
+    <string name="decreament">-</string>
 </resources>
