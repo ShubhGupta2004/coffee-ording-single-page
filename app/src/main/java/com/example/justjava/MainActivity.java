@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void order(View v){
         TextView finalMsg = findViewById(R.id.finalMessage);
-        String msg = "Your order of "+coffeeNos.getText()+" has been successfully ordered";
+        String msg = "Your order of "+coffeeNos.getText()+" coffee had been successfully ordered";
         finalMsg.setText(msg);
     }
 
