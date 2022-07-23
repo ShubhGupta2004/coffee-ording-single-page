@@ -12,6 +12,7 @@ import java.text.NumberFormat;
 public class MainActivity extends AppCompatActivity {
 
     public TextView coffeeNos;
+    public int price = 9;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         int val = Integer.parseInt(coffeeNos.getText().toString());
         val++;
         display(val);
-        displayPrice(val*5);
+        displayPrice(val*price);
     }
 
     public void decrease(View v){
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         if(val>0) {
             val--;
             display(val);
-            displayPrice(val * 5);
+            displayPrice(val * price);
         }else{
             Toast.makeText(MainActivity.this, "Minimum no of order reached..", Toast.LENGTH_SHORT).show();
         }
