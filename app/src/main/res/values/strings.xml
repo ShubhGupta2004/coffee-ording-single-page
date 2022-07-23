@@ -8,4 +8,5 @@
     <string name="increament">+</string>
     <string name="decreament">-</string>
     <string name="finalAnswer" />
+    <string name="coffee_image">Coffee image</string>
 </resources>
