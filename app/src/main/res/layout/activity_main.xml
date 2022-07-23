@@ -8,6 +8,7 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -33,32 +34,32 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginBottom="16dp">
-
-        <Button
-            android:layout_width="42dp"
-            android:layout_height="42dp"
-            android:text="@string/decreament"
-            android:layout_marginEnd="16dp"
-            android:onClick="decrease"/>
-
-
-        <TextView
-            android:id="@+id/Quantity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:layout_marginBottom="16dp"
-            android:text="@string/quant"
-            android:textSize="16sp"
-            android:textStyle="bold" />
+            android:orientation="horizontal">
+
+            <Button
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:layout_marginEnd="16dp"
+                android:onClick="decrease"
+                android:text="@string/decreament" />
+
+
+            <TextView
+                android:id="@+id/Quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/quant"
+                android:textSize="16sp"
+                android:textStyle="bold" />
 
             <Button
                 android:layout_width="42dp"
                 android:layout_height="42dp"
                 android:layout_marginStart="16dp"
-                android:text="@string/increament"
-                android:onClick="increase"/>
+                android:onClick="increase"
+                android:text="@string/increament" />
 
         </LinearLayout>
 
@@ -69,7 +70,7 @@
             android:layout_marginBottom="16dp"
             android:text="@string/price"
             android:textSize="19sp"
-            android:textStyle="bold"/>
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/price"
@@ -79,6 +80,7 @@
             android:text="@string/priceOf"
             android:textSize="16sp"
             android:textStyle="bold" />
+
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,5 +90,19 @@
             android:textStyle="bold" />
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/finalMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/finalAnswer"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:layout_constraintVertical_bias="0.163" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

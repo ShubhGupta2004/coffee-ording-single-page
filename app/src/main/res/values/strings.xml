@@ -7,4 +7,5 @@
     <string name="priceOf">$0</string>
     <string name="increament">+</string>
     <string name="decreament">-</string>
+    <string name="finalAnswer" />
 </resources>

@@ -23,7 +23,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void order(View v){
-        Toast.makeText(MainActivity.this, "Order successful", Toast.LENGTH_SHORT).show();
+        TextView finalMsg = findViewById(R.id.finalMessage);
+        String msg = "Your order of "+coffeeNos.getText()+" has been successfully ordered";
+        finalMsg.setText(msg);
     }
 
     private void display(int i){
