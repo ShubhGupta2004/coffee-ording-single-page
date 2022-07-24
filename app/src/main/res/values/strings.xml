@@ -13,4 +13,5 @@
     <string name="quantitySumaary">Quantity:</string>
     <string name="name">Name :</string>
     <string name="order_summary">Order Summary</string>
+    <string name="get_name">Name                     </string>
 </resources>
