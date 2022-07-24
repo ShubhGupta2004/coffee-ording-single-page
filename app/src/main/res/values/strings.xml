@@ -9,4 +9,8 @@
     <string name="decreament">-</string>
     <string name="finalAnswer" />
     <string name="coffee_image">Coffee image</string>
+    <string name="final_price">Final Price:</string>
+    <string name="quantitySumaary">Quantity:</string>
+    <string name="name">Name :</string>
+    <string name="order_summary">Order Summary</string>
 </resources>
