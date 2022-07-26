@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         coffeeNos = findViewById(R.id.Quantity);
         Toast.makeText(this,"Ordered ..",Toast.LENGTH_SHORT).show();
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -91,6 +92,18 @@ public class MainActivity extends AppCompatActivity {
             displayPrice(finalPrice);
         }else{
             finalPrice=finalPrice-no*5;
+            displayPrice(finalPrice);
+        }
+    }
+
+    public void choco(View v){
+        CheckBox checkBox = findViewById(R.id.choco);
+        int no = Integer.parseInt(coffeeNos.getText().toString());
+        if(checkBox.isChecked()){
+            finalPrice=finalPrice+no*7;
+            displayPrice(finalPrice);
+        }else{
+            finalPrice=finalPrice-no*7;
             displayPrice(finalPrice);
         }
     }

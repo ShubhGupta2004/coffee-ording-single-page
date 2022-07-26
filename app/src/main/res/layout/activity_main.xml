@@ -7,135 +7,160 @@
     android:layout_margin="16dp"
     tools:context=".MainActivity">
 
-    <LinearLayout
-        android:id="@+id/linearLayout"
+
+    <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <EditText
-            android:id="@+id/getName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:hint="Name                              "
-            android:minHeight="48dp" />
-
-
-        <TextView
-            android:id="@+id/Quantity_of_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/quantity"
-            android:textSize="19sp" />
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
+            android:id="@+id/linearLayout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:orientation="horizontal">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.01"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0">
 
-            <Button
-                android:layout_width="48dp"
-                android:padding="6dp"
-                android:layout_height="48dp"
-                android:layout_marginEnd="16dp"
-                android:onClick="decrease"
-                android:text="@string/decreament" />
-
-
-            <TextView
-                android:id="@+id/Quantity"
+            <EditText
+                android:id="@+id/getName"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="16dp"
-                android:text="@string/quant"
+                android:hint="Name                              "
+                android:minHeight="48dp"
+                android:autofillHints="" />
+
+
+            <TextView
+                android:id="@+id/Quantity_of_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/quantity"
+                android:textSize="19sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="16dp"
+                    android:onClick="decrease"
+                    android:padding="6dp"
+                    android:text="@string/decreament" />
+
+
+                <TextView
+                    android:id="@+id/Quantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/quant"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="16dp"
+                    android:onClick="increase"
+                    android:padding="6dp"
+                    android:text="@string/increament" />
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Topping"
+                android:textStyle="bold"
+                android:textSize="16sp" />
+            <CheckBox
+                android:id="@+id/whip"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:onClick="whipped"
+                android:text="Whipped Cream" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chocolate Chips"
+                android:layout_marginBottom="16dp"
+                android:id="@+id/choco"
+                android:onClick="choco"/>
+
+            <TextView
+                android:id="@+id/Price_of_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/price"
+                android:textSize="19sp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:text="@string/priceOf"
                 android:textSize="16sp"
                 android:textStyle="bold" />
 
             <Button
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:padding="6dp"
-                android:layout_marginStart="16dp"
-                android:onClick="increase"
-                android:text="@string/increament" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:onClick="order"
+                android:text="@string/orderButton"
+                android:textStyle="bold" />
 
         </LinearLayout>
-
-        <CheckBox
-            android:id="@+id/whip"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Whipped Cream"
-            android:onClick="whipped"
-            android:layout_marginTop="16dp"
-            android:layout_marginBottom="16dp"/>
-
-        <TextView
-            android:id="@+id/Price_of_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/price"
-            android:textSize="19sp" />
-
-        <TextView
-            android:id="@+id/price"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:text="@string/priceOf"
-            android:textSize="16sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="16dp"
-            android:onClick="order"
-            android:text="@string/orderButton"
-            android:textStyle="bold" />
-
-    </LinearLayout>
+    </ScrollView>
 
     <TextView
         android:id="@+id/finalMessage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="105dp"
+        android:layout_height="0dp"
         android:text="@string/finalAnswer"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        app:layout_constraintVertical_bias="0.163" />
+        app:layout_constraintTop_toBottomOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="141dp"
-        android:layout_height="211dp"
-        android:contentDescription="@string/coffee_image"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.911"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036"
-        app:srcCompat="@drawable/smile" />
+            android:id="@+id/imageView2"
+            android:layout_width="141dp"
+            android:layout_height="211dp"
+            android:contentDescription="@string/coffee_image"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.911"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.036"
+            app:srcCompat="@drawable/smile" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -143,44 +168,42 @@
         android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.124"
+        app:layout_constraintHorizontal_bias="0.125"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/finalMessage"
-        app:layout_constraintVertical_bias="0.351">
+        app:layout_constraintTop_toBottomOf="@+id/scrollView2">
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
             android:text="@string/order_summary"
-            android:textStyle="bold"
-            android:layout_marginBottom="16dp"/>
-
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/orderSummaryName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/name"
-            />
+            android:text="@string/name" />
+
         <TextView
             android:id="@+id/orderSummaryQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/quantitySumaary"/>
+            android:text="@string/quantitySumaary" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/orderSummaryFinalPrice"
-            android:text="@string/final_price"/>
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/final_price" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Thank You !"
             android:layout_marginTop="12dp"
-            android:textStyle="bold"/>
-
-
+            android:text="Thank You !"
+            android:textStyle="bold" />
 
 
     </LinearLayout>
