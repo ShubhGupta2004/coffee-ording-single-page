@@ -3,14 +3,13 @@ package com.example.justjava;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import org.w3c.dom.Text;
 
 import java.text.NumberFormat;
 
@@ -27,6 +26,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         coffeeNos = findViewById(R.id.Quantity);
         Toast.makeText(this,"Ordered ..",Toast.LENGTH_SHORT).show();
+
+
 
     }
 
@@ -49,6 +50,19 @@ public class MainActivity extends AppCompatActivity {
 
 
         finalMsg.setText(msg);
+
+        String s1 = msg +"\n"+"oreder Summary\n"+ "Name: "+Name +"\n"+"Quantity: "+coffeeNos.getText().toString()+"\nFinal Price: "+String.valueOf(finalPrice);
+
+        Intent email = new Intent(Intent.ACTION_SEND);
+        email.putExtra(Intent.EXTRA_EMAIL,"gshubh782@gmail.com");
+        email.putExtra(Intent.EXTRA_SUBJECT, "Coffee order");
+        email.putExtra(Intent.EXTRA_TEXT,s1);
+
+        //need this to prompts email client only
+        email.setType("message/rfc822");
+
+        startActivity(Intent.createChooser(email, "Choose an Email client "));
+
     }
 
     private void display(int i){
