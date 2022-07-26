@@ -111,6 +111,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void choco(View v){
+
         CheckBox checkBox = findViewById(R.id.choco);
         int no = Integer.parseInt(coffeeNos.getText().toString());
         if(checkBox.isChecked()){
