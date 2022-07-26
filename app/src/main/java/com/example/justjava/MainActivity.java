@@ -45,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         TextView SummaryQuantity = findViewById(R.id.orderSummaryQuantity);
         SummaryQuantity.setText("Quantity: "+coffeeNos.getText().toString());
 
-        TextView summaryPrice = findViewById(R.id.orderSummaryFinalPrice);i
+        TextView summaryPrice = findViewById(R.id.orderSummaryFinalPrice);
         summaryPrice.setText("Final Price: "+String.valueOf(finalPrice));
 
 
